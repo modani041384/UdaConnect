@@ -1,0 +1,26 @@
+The Monolith is split in three microservices:
+
+- The Connection API/Service
+- The Person API/Service
+- The Location API/Service
+
+
+Using REST:
+- The Person and Location services use the HTTP rest calls to retrieve data from the Database
+- Also, the Connection service uses the HTTP rest calls to retrieve data from the Database
+
+
+Using KAFKA:
+- Kafka can handle a high volume of data with low latency. It achieves this through efficient disk and memory usage, making it suitable for large-scale message processing.
+- Kafka's architecture allows it to scale horizontally. You can add more brokers to a Kafka cluster to increase its capacity and performance.
+- Kafka stores data durably, meaning messages are written to disk and replicated across multiple brokers. This ensures data is not lost even if some brokers fail.
+- With its replication mechanism, Kafka provides fault tolerance. If a broker fails, another broker with the replicated data can take over.
+- Kafka ensures high availability through its distributed nature. It can continue to operate even if some of its components fail.
+- Kafka guarantees message order within a partition. This is crucial for applications that require ordered processing of messages.
+- Kafka excels in integrating real-time data from various sources, allowing businesses to react to data in real-time and make data-driven decisions faster.
+
+Using gRCP:
+- Efficient communication between microservices in a distributed system.
+- Applications requiring real-time data streaming, such as chat applications or live data feeds.
+- Secure and efficient communication between different services in a multi-language environment.
+
